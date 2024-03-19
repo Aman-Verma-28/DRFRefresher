@@ -146,7 +146,7 @@ class IndividualStoryAPI(APIView):
         if story.author != request.user and not request.user.is_superuser:
             return Response(
                 {
-                    "error": f"You are not authorized to update this story"
+                    "error": "You are not authorized to update this story"
                 },
                 status=status.HTTP_403_FORBIDDEN
             )
@@ -197,7 +197,7 @@ class IndividualStoryAPI(APIView):
         if story.author != request.user and not request.user.is_superuser:
             return Response(
                 {
-                    "error": f"You are not authorized to delete this story"
+                    "error": "You are not authorized to delete this story"
                 },
                 status=status.HTTP_403_FORBIDDEN
             )

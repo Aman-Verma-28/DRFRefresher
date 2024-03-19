@@ -12,7 +12,7 @@ class GoogleMapsAPIHandler:
     if not api_key:
         logger.error("Google API key not found.")
     if api_key:
-        logger.info(f"API KEY initiated.")
+        logger.info("API KEY initiated.")
 
     api_base_url = 'https://maps.googleapis.com/maps/api/'
     geocode_endpoint = 'geocode/json'

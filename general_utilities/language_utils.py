@@ -19,7 +19,7 @@ class LanguageHandlers:
         '''
         Initialization method for the class:
         '''
-        logger.info(f"Initializing LanguageHandlers class.")
+        logger.info("Initializing LanguageHandlers class.")
         self.input_text = input_text
 
     def __repr__(self):

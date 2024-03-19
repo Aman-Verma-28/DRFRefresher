@@ -17,7 +17,7 @@ def create_countries():
     logger.info(f"Retrieved {len(df)} countries.")
 
     list_of_dicts = df.to_dict('records')
-    logger.info(f"Converted Dataframe to list of json")
+    logger.info("Converted Dataframe to list of json")
 
     for country in list_of_dicts:
         logger.info(f"Creating Country: {country.get('name')}.")

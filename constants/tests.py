@@ -14,7 +14,7 @@ class TestIfPathsExist(TestCase):
     Test if the paths exist.
     """
     module_name = __module__.split('.')[0]
-    logger.info(f"Initiating tests for File Paths.")
+    logger.info("Initiating tests for File Paths.")
 
     def test_if_token_exists(self):
         """
