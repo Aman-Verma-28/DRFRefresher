@@ -5,7 +5,7 @@ from storyapp.models import Story
 from storyapp.serializers import StorySerializer
 from storyapp.model_choices import StoryChoice
 from faker import Faker
-import random
+import secrets
 
 class AddStory:
 
@@ -39,11 +39,11 @@ class AddStory:
             StoryChoice.science_fiction
         ]
         
-        random.seed()
+        secrets.SystemRandom().seed()
         
         title = fake.sentence(nb_words=12, variable_nb_words=True).title()
         description = fake.text(max_nb_chars=256)
-        genre = random.choice(genre_list)
+        genre = secrets.choice(genre_list)
         body = fake.text(max_nb_chars=5000)
         author = self.user_id
 
