@@ -38,8 +38,8 @@ class GoogleMapsAPIHandler:
         response = requests.post(
             url,
             params=params,
-            json=data
-        )
+            json=data, 
+        timeout=60)
         logger.info(f"Response received from {url}: {response.status_code}")
         return response.json()
 
